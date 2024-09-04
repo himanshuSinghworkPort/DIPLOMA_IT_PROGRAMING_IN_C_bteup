@@ -1,0 +1,318 @@
+c programs
+1.fibonacci series
+
+#include<stdio.h>    
+int main()    
+{    
+ int n1=0,n2=1,n3,i,number;    
+ printf("Enter the number of elements:");    
+ scanf("%d",&number);    
+ printf("\n%d %d",n1,n2);//printing 0 and 1    
+ for(i=2;i<number;++i)//loop starts from 2 because 0 and 1 are already printed    
+ {    
+  n3=n1+n2;    
+  printf(" %d",n3);    
+  n1=n2;    
+  n2=n3;    
+ }  
+  return 0;  
+ } 
+
+*****************************************************************************
+2.prime no.
+
+#include<stdio.h>  
+int main(){    
+int n,i,m=0,flag=0;    
+printf("Enter the number to check prime:");    
+scanf("%d",&n);    
+   
+for(i=2;i<n;i++)    
+{    
+if(n%i==0)    
+{    
+printf("Number is not prime");    
+flag=1;    
+break;    
+}    
+}    
+if(flag==0)    
+printf("Number is prime");     
+return 0;  
+ } 
+********************************************************************************
+
+
+3.pallindrome no.
+
+#include<stdio.h>  
+int main()    
+{    
+int n,r,sum=0,temp;    
+printf("enter the number=");    
+scanf("%d",&n);    
+temp=n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=(sum*10)+r;    
+n=n/10;    
+}    
+if(temp==sum)    
+printf("palindrome number ");    
+else    
+printf("not palindrome");   
+return 0; 
+
+***************************************************************************
+
+5. factorial no
+
+
+#include<stdio.h>  
+int main()    
+{    
+ int i,fact=1,number;    
+ printf("Enter a number: ");    
+  scanf("%d",&number);    
+    for(i=1;i<=number;i++){    
+      fact=fact*i;    
+  }    
+  printf("Factorial of %d is: %d",number,fact);    
+return 0;  
+}   
+
+****************************************************************************
+
+6.factorial using recursion
+
+
+#include<stdio.h>  
+  
+long factorial(int n)  
+{  
+  if (n == 0)  
+    return 1;  
+  else  
+    return(n * factorial(n-1));  
+}  
+   
+void main()  
+{  
+  int number;  
+  long fact;  
+  printf("Enter a number: ");  
+  scanf("%d", &number);   
+   
+  fact = factorial(number);  
+  printf("Factorial of %d is %ld\n", number, fact);  
+  return 0;  
+}  
+
+
+***************************************************************************
+7. armstrong no.
+
+#include<stdio.h>  
+ int main()    
+{    
+int n,r,sum=0,temp;    
+printf("enter the number=");    
+scanf("%d",&n);    
+temp=n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=sum+(r*r*r);    
+n=n/10;    
+}    
+if(temp==sum)    
+printf("armstrong  number ");    
+else    
+printf("not armstrong number");    
+return 0;  
+}  
+
+8. sum of digits program
+
+#include<stdio.h>  
+ int main()    
+{    
+int n,sum=0,m;    
+printf("Enter a number:");    
+scanf("%d",&n);    
+while(n>0)    
+{    
+m=n%10;    
+sum=sum+m;    
+n=n/10;    
+}    
+printf("Sum is=%d",sum);    
+return 0;  
+********************************************************************
+
+9.reverse no program
+
+#include<stdio.h>  
+ int main()    
+{    
+int n, reverse=0, rem;    
+printf("Enter a number: ");    
+  scanf("%d", &n);    
+  while(n!=0)    
+  {    
+     rem=n%10;    
+     reverse=reverse*10+rem;    
+     n/=10;    
+  }    
+  printf("Reversed Number: %d",reverse);    
+return 0;  
+}   
+
+
+************************************************************************
+10. swap two no without third variable program
+
+
+#include<stdio.h>  
+ int main()    
+{    
+int a=10, b=20;      
+printf("Before swap a=%d b=%d",a,b);      
+a=a+b;//a=30 (10+20)    
+b=a-b;//b=10 (30-20)    
+a=a-b;//a=20 (30-10)    
+printf("\nAfter swap a=%d b=%d",a,b);    
+return 0;  
+}   
+
+************************************************************************
+#include<stdio.h>  
+#include<stdlib.h>  
+ int main()    
+{    
+int a=10, b=20;      
+printf("Before swap a=%d b=%d",a,b);       
+a=a*b;//a=200 (10*20)    
+b=a/b;//b=10 (200/20)    
+a=a/b;//a=20 (200/10)    
+ system("cls");  
+printf("\nAfter swap a=%d b=%d",a,b);       
+return 0;  
+}   
+
+*************************************************************************
+
+11. assembly program
+
+
+#include<stdio.h>  
+void main() {  
+   int a = 10, b = 20, c;  
+   
+   asm {  
+      mov ax,a  
+      mov bx,b  
+      add ax,bx  
+      mov c,ax  
+   }  
+   
+   printf("c= %d",c);  
+}  
+
+***************************************************************************
+
+
+13. matrix multiplication
+
+#include<stdio.h>    
+#include<stdlib.h>  
+int main(){  
+int a[10][10],b[10][10],mul[10][10],r,c,i,j,k;    
+system("cls");  
+printf("enter the number of row=");    
+scanf("%d",&r);    
+printf("enter the number of column=");    
+scanf("%d",&c);    
+printf("enter the first matrix element=\n");    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+scanf("%d",&a[i][j]);    
+}    
+}    
+printf("enter the second matrix element=\n");    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+scanf("%d",&b[i][j]);    
+}    
+}    
+    
+printf("multiply of the matrix=\n");    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+mul[i][j]=0;    
+for(k=0;k<c;k++)    
+{    
+mul[i][j]+=a[i][k]*b[k][j];    
+}    
+}    
+}    
+//for printing result    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+printf("%d\t",mul[i][j]);    
+}    
+printf("\n");    
+}    
+return 0;  
+}  
+
+
+**********************************************************************
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

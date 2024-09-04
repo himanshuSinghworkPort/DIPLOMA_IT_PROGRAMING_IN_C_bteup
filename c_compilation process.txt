@@ -1,0 +1,18 @@
+get to current path
+cd .. ---------> one path hierarchy backword
+reach to drive
+to change drive
+type drive_name: press enter
+now dir command  to show directory
+cd directory_name to go to particular directory
+ 
+how to compile c programs
+
+in command prompt
+type 
+gcc filename.c -ofilename
+press enter
+
+to run file
+type filename
+press enter
